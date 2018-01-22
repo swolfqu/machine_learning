@@ -1,0 +1,8 @@
+lxml
+bs4
+numpy
+requests
+scapy-python3
+dpkt
+matplotlib
+#  sudo apt-get install python3-tk
