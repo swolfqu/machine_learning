@@ -42,6 +42,15 @@ def get_word_list_vector(all_words, word_list):
     return result
 
 
+def get_bag_word_list_vector(all_words, word_list):
+    result = [0] * len(all_words)
+    for word in word_list:
+        if word in all_words:
+            word_index = all_words.index(word)
+            result[word_index] += 1
+    return result
+
+
 def all_words_to_vector(all_words, train_list):
     """
     Convert all_words to word vect according word is appear or not.
@@ -58,10 +67,10 @@ def train_nb(train_words_vec, class_vec):
     """
     Calculate the probability for each word.
     """
-    p0_num = 0
-    p1_num = 0
-    p0_words_vec = np.zeros(len(train_words_vec[0]))
-    p1_words_vec = np.zeros(len(train_words_vec[0]))
+    p0_num = 1
+    p1_num = 1
+    p0_words_vec = np.ones(len(train_words_vec[0]))
+    p1_words_vec = np.ones(len(train_words_vec[0]))
 
     for index, values in enumerate(train_words_vec):
         if class_vec[index] == 1:
@@ -71,8 +80,8 @@ def train_nb(train_words_vec, class_vec):
             p0_num += sum(values)
             p0_words_vec += values
 
-    p0_vec = p0_words_vec / p0_num
-    p1_vec = p1_words_vec / p1_num
+    p0_vec = np.log(p0_words_vec / p0_num)
+    p1_vec = np.log(p1_words_vec / p1_num)
 
     return p0_vec.tolist(), p1_vec.tolist()
 
@@ -81,6 +90,10 @@ def classify_nb(p0_vec, p1_vec, word_vec):
     words_p0 = sum(np.array(p0_vec) * np.array(word_vec))
     words_p1 = sum(np.array(p1_vec) * np.array(word_vec))
     print("words_p0: {} words_p1: {}".format(words_p0, words_p1))
+    if words_p0 > words_p1:
+        return 0
+    else:
+        return 1
 
 
 def testing_nb():
@@ -90,15 +103,16 @@ def testing_nb():
     train_words_vec = all_words_to_vector(all_words, train_list)
     print("all_words_vec: {}".format(train_words_vec))
     test_entry = ['love', 'my', 'dalmation']
+    test_entry = ['stupid', 'garbage']
     print(test_entry)
     words_vector = get_word_list_vector(all_words, test_entry)
     p0_vec, p1_vec = train_nb(train_words_vec, class_vec)
     print("p0_vec: {}\np1_vec: {}".format(p0_vec, p1_vec))
 
     # Show words probability
-    prob_stat = {}
-    for index, word in all_words:
-        prob_stat[item] = [p0_vec]
+    for index, word in enumerate(all_words):
+        print("{:<10s} {:<20.8f} {:<20.8f}".format(
+            word, p0_vec[index], p1_vec[index]))
 
     classify_nb(p0_vec, p1_vec, words_vector)
 

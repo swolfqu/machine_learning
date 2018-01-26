@@ -1,0 +1,39 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ax	EXTRAS/create2Normal.py	/^ax = fig.add_subplot(111)$/;"	v
+ax	EXTRAS/monoDemo.py	/^ax = fig.add_subplot(211)$/;"	v
+ax	EXTRAS/monoDemo.py	/^ax = fig.add_subplot(212)$/;"	v
+bagOfWords2VecMN	bayes.py	/^def bagOfWords2VecMN(vocabList, inputSet):$/;"	f
+calcMostFreq	bayes.py	/^def calcMostFreq(vocabList,fullText):$/;"	f
+classifyNB	bayes.py	/^def classifyNB(vec2Classify, p0Vec, p1Vec, pClass1):$/;"	f
+colors	EXTRAS/create2Normal.py	/^colors =[]$/;"	v
+createVocabList	bayes.py	/^def createVocabList(dataSet):$/;"	f
+fFlyer	EXTRAS/create2Normal.py	/^        fFlyer = r0 + 2.0$/;"	v
+fFlyer	EXTRAS/create2Normal.py	/^        fFlyer = r0 + 9.0$/;"	v
+fig	EXTRAS/create2Normal.py	/^fig = plt.figure()$/;"	v
+fig	EXTRAS/monoDemo.py	/^fig = plt.figure()$/;"	v
+fw	EXTRAS/create2Normal.py	/^fw = open('testSet.txt','w')$/;"	v
+getTopWords	bayes.py	/^def getTopWords(ny,sf):$/;"	f
+loadDataSet	bayes.py	/^def loadDataSet():$/;"	f
+localWords	bayes.py	/^def localWords(feed1,feed0):$/;"	f
+logS	EXTRAS/monoDemo.py	/^logS = log(s)$/;"	v
+markers	EXTRAS/create2Normal.py	/^markers =[]$/;"	v
+myClass	EXTRAS/create2Normal.py	/^    myClass = random.uniform(0,1)$/;"	v
+n	EXTRAS/create2Normal.py	/^n = 1000 #number of points to create$/;"	v
+s	EXTRAS/monoDemo.py	/^s = sin(2*pi*t)$/;"	v
+setOfWords2Vec	bayes.py	/^def setOfWords2Vec(vocabList, inputSet):$/;"	f
+spamTest	bayes.py	/^def spamTest():$/;"	f
+t	EXTRAS/monoDemo.py	/^t = arange(0.0, 0.5, 0.01)$/;"	v
+tats	EXTRAS/create2Normal.py	/^        tats = 1.0*r1 + fFlyer - 9.0$/;"	v
+tats	EXTRAS/create2Normal.py	/^        tats = r1+fFlyer - 2.0$/;"	v
+testingNB	bayes.py	/^def testingNB():$/;"	f
+textParse	bayes.py	/^def textParse(bigString):    #input is big string, #output is word list$/;"	f
+trainNB0	bayes.py	/^def trainNB0(trainMatrix,trainCategory):$/;"	f
+xcord0	EXTRAS/create2Normal.py	/^xcord0 = []$/;"	v
+xcord1	EXTRAS/create2Normal.py	/^xcord1 = []$/;"	v
+ycord0	EXTRAS/create2Normal.py	/^ycord0 = []$/;"	v
+ycord1	EXTRAS/create2Normal.py	/^ycord1 = []$/;"	v
